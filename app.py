@@ -5,18 +5,26 @@
 #In teacher mode you will be asking the user to input a word/phrase and the
 #answer as a key:value pair. These pairs will be written to a json file called
 #FlashCards.json
+import json 
 class History:
-    def __init__(self, emperor, year, empire, date, image=None):
+    def __init__(self, emperor, year, empire, climate, image=None):
         self.emperor = emperor
         self.year = year
         self.empire = empire
-        self.date = date
+        self.climate = climate
+        self.image = image
     def display_info(self):
-        
-        
+        return f"{self.emperor} {self.make} {self.model}"
+    def to_dict(self):
+        return{"emperor": self.emperor, "year": self.year, "empire": self.empire, "climate": self.climate, "image": self.image}
+
+history = [
+    History("Emperor Wu", ),
+
+]
+
 #Student Mode
 #In student mode you will present the student with the
 #phrases/words/images and the user will type the answer in the terminal.
 #Keep a tally of correct answers and provide a score. Give students bonus
 #points for “Streaks”
-
