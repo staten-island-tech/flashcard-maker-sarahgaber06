@@ -6,7 +6,7 @@
 #answer as a key:value pair. These pairs will be written to a json file called
 #FlashCards.json
 import json 
-class History:
+class History_studies:
     def __init__(self, emperor, year, empire, climate, image=None):
         self.emperor = emperor
         self.year = year
@@ -17,11 +17,12 @@ class History:
         return f"{self.emperor} {self.make} {self.model}"
     def to_dict(self):
         return{"emperor": self.emperor, "year": self.year, "empire": self.empire, "climate": self.climate, "image": self.image}
-
+x =History_studies("Emperor Wu", "141 to 87 BC", "The Tang Dynasty", "Humid")
 history = [
-    History("Emperor Wu", ),
-
+   
 ]
+history.append(x.to_dict())
+print(history)
 
 #Student Mode
 #In student mode you will present the student with the
