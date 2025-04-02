@@ -18,12 +18,15 @@ class History_studies:
     def to_dict(self):
         return{"emperor": self.emperor, "year": self.year, "empire": self.empire, "climate": self.climate, "image": self.image}
 x =History_studies("Emperor Wu", "141 to 87 BC", "The Tang Dynasty", "Humid")
-history = [
-   
-]
+history = []
 history.append(x.to_dict())
 print(history)
+file_name = 'history_data.json'
 
+with open(file_name, 'w') as json_file:
+            history_data = json.load(file_name)
+
+print(f"Data saved to {file_name}")
 #Student Mode
 #In student mode you will present the student with the
 #phrases/words/images and the user will type the answer in the terminal.
