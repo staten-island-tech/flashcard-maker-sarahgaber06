@@ -23,12 +23,49 @@ history.append(x.to_dict())
 print(history)
 file_name = 'history_data.json'
 
-with open(file_name, 'w') as json_file:
-            history_data = json.load(file_name)
+emperor = input("What emperor ruled the Tang Dynasty")
+if emperor == "Emperor Wu":
+    print("correct")
+else:
+    print("incorrect")
 
-print(f"Data saved to {file_name}")
+year = input("From what years did Emperor Wu rule?")
+if year == "141 to 87 BC":
+    print("correct")
+else:
+    print("incorrect")
+
+empire = input("What empire did Emperor Wu rule over?")
+if empire == "The Tang Dynasty":
+    print("correct")
+else:
+    print("incorrect")
+
+climate = input("What climate is the Tang Dynasty?")
+if climate == "Humid":
+    print("correct")
+else:
+    print("incorrect")
+
+
+history = History_studies(emperor, "141 to 87 BC", "The Tang Dynasty", "Humid")
+
+try:
+    with open("history.json", "r") as file:
+        history_data = json.load(file)
+except FileNotFoundError: 
+    history_data = []
+
+with open("cars.json", "w") as file:
+    json.dump(history_data, file, indent=4)
+
+# Append new car
+history_data.append(history.to_dict())
+
+
 #Student Mode
 #In student mode you will present the student with the
 #phrases/words/images and the user will type the answer in the terminal.
 #Keep a tally of correct answers and provide a score. Give students bonus
 #points for “Streaks”
+
