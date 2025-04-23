@@ -1,9 +1,4 @@
-#You will be creating an application that has two modes
-
-#Teacher Mode
-#In teacher mode you will be asking the user to input a word/phrase and the
-#answer as a key:value pair. These pairs will be written to a json file called
-#FlashCards.json
+#Student and Teacher Modes
 import json 
 mode = input("Are you a teacher or a student?")
 class History_studies:
@@ -45,43 +40,31 @@ if mode == "student":
 
     for flashcard in history_data:
         print(flashcard["empire"])
-    if "empire" == "The Tang Dynasty":
-        print("correct")
-        points +1
-        streaks +1
-    else:
-        print("incorrect")
 
-    for flashcard in history_data:
         print(flashcard["emperor"])
-        if "emperor" == "Emperor Wu":
+        guess = input("What emperor?")
+        if guess == flashcard["emperor"]:
             print("correct")
             points +1
             streaks +1
         else:
             print("incorrect")
 
-for flashcard in history_data:
-    print(flashcard["year"])
-    if "year" == "141 to 81 BC":
-        print("correct")
-        points +1
-        streaks +1
-    else:
-        print("incorrect")
+        print(flashcard["year"])
+        guess = input("What year?")
+        if guess == flashcard["year"]:
+            print("correct")
+            points +1
+            streaks +1
+        else:
+            print("incorrect")
 
-for flashcard in history_data:
-    print(flashcard["climate"])
-    if "climate" == "Humid":
-        print("correct")
-        points +1
-        streaks +1
-    else:
-        print("incorrect")
-    
-#Student Mode
-#In student mode you will present the student with the
-#phrases/words/images and the user will type the answer in the terminal.
-#Keep a tally of correct answers and provide a score. Give students bonus
-#points for “Streaks”
+        print(flashcard["climate"])
+        guess = input("What climate?")
+        if guess == flashcard["climate"]:
+            print("correct")
+            points +1
+            streaks +1
+        else:
+            print("incorrect")
 
