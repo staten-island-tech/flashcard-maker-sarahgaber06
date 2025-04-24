@@ -26,9 +26,9 @@ if mode == "teacher":
     new_empire = input("Enter an empire")
     new_climate = input("Enter a climate")
 
-new_flashcard = History_studies(new_emperor, new_year, new_empire, new_climate)
+    new_flashcard = History_studies(new_emperor, new_year, new_empire, new_climate)
 
-history_data.append(new_flashcard.to_dict())
+    history_data.append(new_flashcard.to_dict())
 
 # Save updated data back to file
 with open("history.json", "w") as file:
@@ -41,30 +41,29 @@ if mode == "student":
     for flashcard in history_data:
         print(flashcard["empire"])
 
-        print(flashcard["emperor"])
         guess = input("What emperor?")
         if guess == flashcard["emperor"]:
             print("correct")
-            points +1
-            streaks +1
+            points +=1
+            streaks +=1
         else:
             print("incorrect")
 
-        print(flashcard["year"])
         guess = input("What year?")
         if guess == flashcard["year"]:
             print("correct")
-            points +1
-            streaks +1
+            points +=1
+            streaks +=1
         else:
             print("incorrect")
 
-        print(flashcard["climate"])
         guess = input("What climate?")
         if guess == flashcard["climate"]:
             print("correct")
-            points +1
-            streaks +1
+            points +=1
+            streaks +=1
         else:
             print("incorrect")
+        break 
+
 
