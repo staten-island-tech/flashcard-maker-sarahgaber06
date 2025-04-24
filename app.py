@@ -46,24 +46,37 @@ if mode == "student":
             print("correct")
             points +=1
             streaks +=1
+            print(streaks)
+            print(points)
         else:
             print("incorrect")
+            print(streaks)
+            print(points)
 
         guess = input("What year?")
         if guess == flashcard["year"]:
             print("correct")
             points +=1
             streaks +=1
+            print(streaks)
+            print(points)
         else:
             print("incorrect")
+            print(streaks)
+            print(points)
 
         guess = input("What climate?")
         if guess == flashcard["climate"]:
             print("correct")
             points +=1
             streaks +=1
+            print(streaks)
+            print(points)
         else:
             print("incorrect")
+            print(streaks)
+            print(points)
+        print("Great Job, let's practice again.")
         break 
-
+        
 

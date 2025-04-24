@@ -89,5 +89,12 @@
         "empire": "dsfg",
         "climate": "dfg",
         "image": null
+    },
+    {
+        "emperor": "Emperor Wu",
+        "year": "1",
+        "empire": "2",
+        "climate": "2",
+        "image": null
     }
 ]
